@@ -1,0 +1,33 @@
+.clock-container {
+  text-align: center;
+  width: 100%;
+}
+.outer-shell {
+  background-color: #555;
+  width: 500px;
+  height: 225px;
+  display: inline-block;
+}
+.inner-shell {
+  background-color: #000;
+  width: 95%;
+  height: 95%;
+  border: 15px solid #555;
+}
+.left-labels {
+  color: #fff;
+}
+.clock-screen {
+  background-color: #500;
+  width: 300px;
+  height: 112.5px;
+}
+.clock-text {
+  color: #f00;
+}
+.clock-indicator {
+  background-color: #f00;
+}
+.bottom-text {
+  color: #fff;
+}
