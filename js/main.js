@@ -68,7 +68,7 @@ $(document).on('ready', function() {
         var clockVisualText = newTime.getHours() + ":" + ((newTime.getMinutes() < 10) ? "0" + newTime.getMinutes() : newTime.getMinutes())
         console.log(clockVisualText, newTime.getSeconds());
         $('#clock-time').text(clockVisualText);
-        $('#clock-time').fadeToggle(1000);
+        $('#clock-time').fadeToggle(900);
     }
 
     // set initial time
