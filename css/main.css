@@ -4,14 +4,10 @@
 }
 .outer-shell {
   background-color: #555;
-  width: 500px;
-  height: 200px;
   display: inline-block;
 }
 .inner-shell {
   background-color: #000;
-  width: 95%;
-  height: 95%;
   border: 15px solid #555;
   overflow: hidden;
 }
@@ -26,7 +22,7 @@
 }
 .clock-screen {
   background-color: #500;
-  margin-top: 20px;
+  margin: 20px 10px 3px 10px;
   display: inline-block;
 }
 .clock-text {
@@ -48,8 +44,6 @@
   background-color: #f00;
 }
 .bottom-text {
-  margin-right: 20px;
   color: #fff;
-  float: right;
-  clear: both;
+  margin: 5px 0 5px 85px;
 }
