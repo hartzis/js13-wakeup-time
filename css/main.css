@@ -1,6 +1,6 @@
 .clock-container {
   margin: 0 auto;
-  width: 65%;
+  width: 500px;
 }
 .outer-shell {
   background-color: #555;
@@ -17,7 +17,7 @@
   float: left;
   clear: left;
   width: 75px;
-  margin-top: 20px;
+  margin-top: 22px;
   text-align: right;
 }
 .clock-screen {

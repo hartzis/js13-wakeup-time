@@ -42,6 +42,7 @@ $(document).on('ready', function() {
 
     var clockText = $('<div>', {
         "class": 'clock-text',
+        "id": 'clock-time',
         "text": '00:00'
     })
     var clockPM = $('<div>', {
@@ -51,9 +52,30 @@ $(document).on('ready', function() {
         "class": 'pm-auto',
     })
 
+    // setup clock screen
+    clockScreen.append(clockPM, clockAuto, clockText)
 
+    // setup outside clock screen
+    innerShell.append(pm, auto, clockScreen, amFreq, fmFreq)
 
+    // setup clock shell
+    outerShell.append(innerShell)
 
-    $('.clock-container').append(outerShell.append(innerShell.append(pm, auto, clockScreen.append(clockPM, clockAuto, clockText), amFreq, fmFreq)));
+    // draw clock 
+    $('.clock-container').append(outerShell);
+
+    var setDisplayTime = function(newTime) {
+        var clockVisualText = newTime.getHours() + ":" + ((newTime.getMinutes() < 10) ? "0" + newTime.getMinutes() : newTime.getMinutes())
+        console.log(clockVisualText, newTime.getSeconds());
+        $('#clock-time').text(clockVisualText);
+        $('#clock-time').fadeToggle(1000);
+    }
+
+    // set initial time
+    setDisplayTime(new Date);
+
+    var timeSetter = setInterval(function() {
+        setDisplayTime(new Date)
+    }, 900);
 
 });
